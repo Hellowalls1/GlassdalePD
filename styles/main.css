@@ -1,0 +1,19 @@
+.criminalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:wrap;
+}
+
+.criminalInfo {
+    flex-direction: row;
+    border: 2px solid black;
+    justify-content: space-evenly;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 250px;
+    padding: 0 0 1rem 1rem;
+
+}
+.criminalName{
+    text-align: center;
+}
