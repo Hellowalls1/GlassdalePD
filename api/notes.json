@@ -1,10 +1,28 @@
 {
-     "notes": [
-        { 
-         "text": ,
-          "date": ,
-          "suspect": 
-         }
-     ]
+  "notes": [
+    {
+      "id": "1",
+      "noteText": "placeholder note one",
+      "timestamp": "3/12/20",
+      "criminal": "John Doe"
+    },
+    {
+      "noteText": "\"not sure\"",
+      "criminal": "james",
+      "timestamp": 1584392294572,
+      "id": "2xE84vp"
+    },
+    {
+      "noteText": "not sure",
+      "criminal": "sally",
+      "timestamp": 1584392328806,
+      "id": "6SFlUcU"
+    },
+    {
+      "noteText": "not sure",
+      "criminal": "sally",
+      "timestamp": 1584392328900,
+      "id": "4JPRQf3"
+    }
+  ]
 }
-
