@@ -1,3 +1,8 @@
+@import "./notes.css";
+@import "./filter.css";
+@import "./filter.css";
+
+
 .criminalsContainer {
     display: flex;
     flex-wrap: wrap;
