@@ -1,4 +1,4 @@
-export const Note = noteObject => {
+export const Note = noteObject => { //HTML REPRESENTATION OF THE NOTES
     return `
         <section class="note">
             <header>
