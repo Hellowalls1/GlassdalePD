@@ -22,3 +22,9 @@
 .criminalName{
     text-align: center;
 }
+
+.listsContainer {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: no-wrap; 
+}

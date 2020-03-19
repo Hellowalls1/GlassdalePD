@@ -17,7 +17,7 @@ export const useNotes = () => notes.slice()
     Get the state of the notes from the API into the application
 */
 
-export const getNotes = () => {
+export const getNotes = () => { 
     return fetch('http://localhost:8088/notes')
         .then(response => response.json())
         .then(parsedNotes => {
