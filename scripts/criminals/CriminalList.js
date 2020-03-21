@@ -2,9 +2,28 @@
 
 import { useCriminals } from "./CriminalProvider.js";
 import { Criminal } from "./Criminal.js";
+// import { KnownAssociatesDialog } from "./knownAssociatesDialog.js";
 
 const contentTarget = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
+
+//listen for click on the dialog box for known associates
+contentTarget.addEventListener("click", clickEvent => {
+ if (clickEvent.target.id.startsWith("associates--")) {
+     //get the id of the criminal
+     const [junkass, criminalId] = clickEvent.target.id.split("--")
+     //let the system know that the known associates button was clicked
+     const showAssociatesEvent = new CustomEvent("knownAssociatesClicked", {
+        detail: {
+            chosenCriminal: criminalId
+        }
+      })
+      eventHub.dispatchEvent(showAssociatesEvent )
+ }
+    
+})
+
+
 
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener("chosenCrime", event => {
