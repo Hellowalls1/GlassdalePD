@@ -7,7 +7,7 @@ import { useConvictions } from "./ConvictionProvider.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".filters__crime")
-
+ 
 // On the content target, listen for a "change" event.
 contentTarget.addEventListener("change", changeEvent => {
 
