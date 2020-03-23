@@ -1,64 +1,18 @@
 {
   "notes": [
     {
-      "id": "1",
-      "noteText": "placeholder note one",
-      "timestamp": "3/12/20",
-      "criminal": "John Doe"
+      "noteText": "note ",
+      "criminal": "test criminal",
+      "timestamp": 1584982499000,
+      "id": 1,
+      "criminalId": 1
     },
     {
-      "noteText": "\"not sure\"",
-      "criminal": "james",
-      "timestamp": 1584392294572,
-      "id": "2xE84vp"
-    },
-    {
-      "noteText": "not sure",
-      "criminal": "sally",
-      "timestamp": 1584392328806,
-      "id": "6SFlUcU"
-    },
-    {
-      "noteText": "not sure",
-      "criminal": "sally",
-      "timestamp": 1584392328900,
-      "id": "4JPRQf3"
-    },
-    {
-      "noteText": "kjkj",
-      "criminal": "jkjkj",
-      "timestamp": 1584645104595,
-      "id": "YCan0l-"
-    },
-    {
-      "noteText": "kjkj",
-      "criminal": "jkjkj",
-      "timestamp": 1584645106320,
-      "id": "-MzSuOQ"
-    },
-    {
-      "noteText": "kjkj",
-      "criminal": "jkjkj",
-      "timestamp": 1584645126035,
-      "id": "_CUXCHL"
-    },
-    {
-      "noteText": "kjkj",
-      "criminal": "jkjkj",
-      "timestamp": 1584645525981,
-      "id": "CYLUanc"
-    },
-    {
-      "noteText": "looking guilty",
-      "criminal": "Madelyn Lebsack",
-      "timestamp": 1584650221688,
-      "id": "rTP4iTs"
-    },
-    {
-      "noteText": "looking guilty",
-      "criminal": "Madelyn Lebsack",
-      "timestamp": 1584650224002,
-      "id": "8lOAgEq"
+      "noteText": "Test",
+      "criminal": "Rogelio Hills",
+      "timestamp": 1584988716730,
+      "id": 2,
+      "criminalId": 2
     }
   ]
 }
