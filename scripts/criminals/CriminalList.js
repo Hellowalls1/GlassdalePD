@@ -6,12 +6,14 @@ import { Criminal } from "./Criminal.js";
 
 const contentTarget = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
+let youCanSeeMe = true
+
 
 //listen for click on the dialog box for known associates
 contentTarget.addEventListener("click", clickEvent => {
  if (clickEvent.target.id.startsWith("associates--")) {
      //get the id of the criminal
-     const [junkass, criminalId] = clickEvent.target.id.split("--")
+     const [junk, criminalId] = clickEvent.target.id.split("--")
      //let the system know that the known associates button was clicked
      const showAssociatesEvent = new CustomEvent("knownAssociatesClicked", {
         detail: {
@@ -23,6 +25,17 @@ contentTarget.addEventListener("click", clickEvent => {
     
 })
 
+//has to do with the witness button adding and removing the witness list when clicked
+eventHub.addEventListener("witnessButtonClicked", customEvent => { //when the button is clicked custom event dispatched witnessList is dispatched witness list is now listening for it thats when we render 
+    youCanSeeMe = !youCanSeeMe
+
+    if (youCanSeeMe) {
+        contentTarget.classList.remove("invisible")
+    }
+    else {
+        contentTarget.classList.add("invisible")
+    }
+ })
 
 
 // Listen for the custom event you dispatched in ConvictionSelect
@@ -59,3 +72,5 @@ export const CriminalList = () => {
         contentTarget.innerHTML += Criminal(singleCriminal)
     }
 }
+
+

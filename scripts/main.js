@@ -8,14 +8,15 @@ import { DisplayNoteFormButton } from "./notes/DisplayNoteFormButton.js";
 import NoteForm from "./notes/noteForm.js";
 import "./notes/noteList.js";
 import "./criminals/knownAssociatesDialog.js"; 
+import "./witnesses/WitnessList.js"
+import { WitnessStatementButton } from "./witnesses/WitnessStatementButton.js";
 NoteForm()
 getConvictions().then(ConvictionSelect)
 getCriminals().then(CriminalList)
 
 DisplayNotesButton()
-
 DisplayNoteFormButton()
-
-
+NoteForm()
+WitnessStatementButton() 
 
 getOfficers()
