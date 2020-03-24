@@ -14,6 +14,8 @@ eventHub.addEventListener("allNotesClicked", customEvent => { //notes be clicked
 })
 
 
+
+
 const render = () => { //extract data from data provider //  
 
     const contentTarget = document.querySelector(".notesContainer")

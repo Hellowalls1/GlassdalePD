@@ -1,6 +1,11 @@
 @import "./notes.css";
 @import "./filter.css";
-@import "./filter.css";
+@import "./criminal.css";
+
+
+.invisible {
+    display: none !important;
+} 
 
 
 .criminalsContainer {
