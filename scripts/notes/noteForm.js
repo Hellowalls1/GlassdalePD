@@ -1,4 +1,5 @@
 import { saveNote } from "./NoteDataProvider.js"
+import { useCriminals } from "../criminals/CriminalProvider.js"
 
 
 const contentTarget = document.querySelector(".noteFormContainer")
@@ -21,9 +22,12 @@ const contentTarget = document.querySelector(".noteFormContainer")
 //     }
 // })
 
+
 const eventHub = document.querySelector(".container")
 
 let visibility = false
+
+//being used to show and hide the noteForm
 
 eventHub.addEventListener("noteFormButtonClicked", customEvent => {
 
@@ -42,23 +46,25 @@ contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
         const noteText = document.querySelector("#noteText").value
-        const criminalName = document.querySelector("#criminal").value
+        const criminalId = document.querySelector("#criminalDropdown").value //giving you the value of the Primary Key (id) of each criminal
 
         // Make a new object representation of a note
         const newNote = {
             noteText: noteText,
-            criminal: criminalName,
+            criminal: parseInt(criminalId), //the value of my crimal property on my object I want to push to the API / use type coersion to turn the "id#" into a string "
             timestamp: Date.now()
         }
 
             // Change API state and application state 
-            saveNote(newNote)
+            saveNote(newNote) //sending the newNote object to saveNote
         }
     })
     
 
-const render = () => {
+const render = () => { 
     contentTarget.classList.add("invisible")
+
+    const allCriminals = useCriminals() // pulling in application state assigning a variable to the useCriminals() function that pulls in data from the API
     contentTarget.innerHTML = `
        <fieldset>
        <fieldset>
@@ -68,7 +74,17 @@ const render = () => {
         </fieldset>
         <fieldset>
         <label for="criminal">Criminal:</label>
-        <input type="text" id="criminal"></input>
+        <select id="criminalDropdown"> 
+            <option value="0">Please choose a criminal</option>  //created a dropbdown with option       
+                ${
+                    allCriminals.map(
+                        (currentCriminalObject) => {
+                            return `<option value="${currentCriminalObject.id}">${currentCriminalObject.name}</option>`
+                        }
+                    )
+                }
+            </select>
+      
         </fieldset>
 
         <button id="saveNote">Save Note</button>

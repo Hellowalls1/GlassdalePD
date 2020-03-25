@@ -28,7 +28,7 @@ const render = () => { //extract data from data provider //
 
          contentTarget.innerHTML = allTheNotes.map(note => { //iterate array with a map to convert objects into HTML
 
-            const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId) //if the criminal id and the note id match then return
+            const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminal) //if the criminal id and the note id match then return
 
             return Note(note, relatedCriminal)
             }
