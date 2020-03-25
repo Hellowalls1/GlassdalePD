@@ -9,8 +9,7 @@ export const getConvictions = () => {
         .then(response => response.json())
         .then(
             parsedConvictions => {
-                // console.table(parsedConvictions)
-                convictions = parsedConvictions
+                 convictions = parsedConvictions
                    /*
         Load database state into application state with a fetch().
         Make sure the last `then()` sets the local `convictions`

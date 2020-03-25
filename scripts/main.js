@@ -6,13 +6,16 @@ import ConvictionSelect from "./convictions/ConvictionSelect.js";
 import { DisplayNotesButton } from "./notes/DisplayNotesButton.js";
 import { DisplayNoteFormButton } from "./notes/DisplayNoteFormButton.js";
 import NoteForm from "./notes/noteForm.js";
-import "./notes/noteList.js";
 import "./criminals/knownAssociatesDialog.js"; 
 import "./witnesses/WitnessList.js"
 import { WitnessStatementButton } from "./witnesses/WitnessStatementButton.js";
-NoteForm()
+import { NoteList } from "./notes/noteList.js";
+
+getCriminals() //get the criminals from the API
+    .then(CriminalList) //getting the list of criminals because you have to get a criminal to select a criminal to make a note
+    .then(NoteForm) //
+    .then(NoteList)  //
 getConvictions().then(ConvictionSelect)
-getCriminals().then(CriminalList).then(NoteForm) //get the criminals then invoke criminal list then invoke noteform
 DisplayNotesButton()
 DisplayNoteFormButton()
 

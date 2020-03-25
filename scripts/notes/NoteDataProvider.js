@@ -26,6 +26,14 @@ export const getNotes = () => {
 
 }
 
+export const deleteNote = noteId => {
+    return fetch(`http://localhost:8088/notes/${noteId}`, {  //route to the exact note you want to delte based on the noteId
+        method: "DELETE" //method wanted on request is delete
+    })
+        .then(getNotes) //once that is performed go get new notes because the API state has changed 
+        .then(dispatchStateChangeEvent) //since the application state has changed we need to let it know by informing with this event  
+    }
+
 
 // method that creates/sends to api/(POSTS) cohorts
 export const saveNote = note => {
@@ -39,3 +47,4 @@ export const saveNote = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
+

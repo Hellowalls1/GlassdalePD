@@ -1,22 +1,3 @@
 {
-  "notes": [
-    {
-      "noteText": "kj",
-      "criminal": 4,
-      "timestamp": 1585088494008,
-      "id": 1
-    },
-    {
-      "noteText": "asdfasdf",
-      "criminal": 12,
-      "timestamp": 1585088654719,
-      "id": 2
-    },
-    {
-      "noteText": "m,m",
-      "criminal": 8,
-      "timestamp": 1585094453433,
-      "id": 3
-    }
-  ]
+  "notes": []
 }
